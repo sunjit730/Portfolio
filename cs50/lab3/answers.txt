@@ -1,0 +1,40 @@
+sort1 uses: Bubble Sort
+Times:
+random5000: 0.086s
+random50000: 14.998s
+reversed5000: 0.109s
+reversed50000: 12.605s
+sorted5000: 0.009s
+sorted50000: 2.770s
+
+How do you know?: 
+Looking and comparing random5000, random50000, sort5000, and sort50000 with other files makes me come to the conclusion that sort1 uses Bubble Sort. We see that a sorted array of 50000 elements
+takes 2.770s to sort, compared to the 5.713s and 11.394s of the other two. Bubble Sort has the lowest lower bound with Omega(n), this means that an already sorted array will take an order of magnitude
+less time than Selection Sort Omega(n^2), and slightly lower than an order of magnitude less than Merge Sort Omega(nlogn).
+
+sort2 uses: Merge Sort
+Times:
+random5000: 0.012s
+random50000: 3.644s
+reversed5000: 0.015s
+reversed50000: 2.487s
+sorted5000: 0.012s
+sorted50000: 5.713s
+
+How do you know?:
+Looking and comparing the same files as above, we can conclude that sort2 uses Merge Sort. The random50000 file takes significantly less time than the other two. This is because Merge Sort has an upper bound
+of O(nlogn) compared to the other two with upper bounds of O(n^2). Additionally, we see that the sorted50000 takes a little longer than sorted50000 of the above Bubble Sort. This is because the lower bound of
+Merge Sort is Omega(nlogn) vs the lower bound of Bubble Sort being Omega(n).
+
+sort3 uses: Selection Sort
+Times:
+random5000: 0.102s
+random50000: 8.762s
+reversed5000: 0.036s
+reversed50000: 9.034s
+sorted5000: 0.059s
+sorted50000: 11.394s
+
+How do you know?:
+Looking and comparing the same files as above, we can conclude that sort3 uses Selection Sort. Looking primarily at the sorted50000 array, we see it takes longer than both the other two files. This is because the
+lower bound of Selection Sort is Omega(n^2), so even a sorted array will still take a long tim
